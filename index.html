@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body onload="getWeatherByUserLocation()">
+    <div class="title-bar">
+        <h1>Weather App</h1>
+    </div>
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="locationInput" placeholder="Enter location">
+            <button onclick="getWeatherByLocation()">Search</button>
+            <button onclick="getWeatherByUserLocation()">My Location</button>
+        </div>
+        <div id="weatherInfo" class="weather-container" style="display: none;">
+            <div class="weather-info">
+                <h2 id="location">Location</h2>
+                <div id="weatherIcon"></div>
+                <p id="description">Description</p>
+                <p id="temperature">Temperature</p>
+                <p id="humidity">Humidity</p>
+                <p id="wind">Wind Speed</p>
+                <p id="pressure">Pressure</p>
+                <p id="visibility">Visibility</p>
+                <p id="sunrise">Sunrise</p>
+                <p id="sunset">Sunset</p>
+            </div>
+            <div id="hourlyForecast" class="forecast-container"></div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© 2024 Aditya Yadav. All rights reserved.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
